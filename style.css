@@ -207,6 +207,10 @@ body p {
   z-index: 3;  
 }
 
+.iphone__screen.switched-off {
+  opacity: 0;
+}
+
 .iphone_vertical {
   top: 53px;
   left: 112px;  

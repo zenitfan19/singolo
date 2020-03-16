@@ -1,6 +1,7 @@
 const HEADER_MENU = document.getElementById('header__menu');
 const PORTFOLIO_TAGS = document.getElementById('portfolio-tag-list');
 const PORTFOLIO_IMAGES_BORDER = document.createElement('div');
+const IPHONES = document.querySelectorAll('.iphone');
 let PORTFOLIO_IMAGES = document.getElementById('portfolio-images');
 
 PORTFOLIO_IMAGES_BORDER.classList.add('example__img-border');
@@ -40,3 +41,12 @@ PORTFOLIO_IMAGES.addEventListener('click', (event) => {
     event.target.parentNode.removeChild(event.target);
   }
 });
+
+IPHONES.forEach(el => el.addEventListener('click', (event) => {
+  if(event.target.classList.contains('iphone__model')) {
+    let screen = event.target.nextElementSibling.classList.contains('iphone__screen') ? event.target.nextElementSibling : null;
+    if(screen) {
+      screen.classList.toggle('switched-off');    
+    }
+  }
+}));
