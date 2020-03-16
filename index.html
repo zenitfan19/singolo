@@ -14,16 +14,16 @@
       <span class="logo__text logo__text_red">*</span>
     </a>
     <nav class="header__navigation">
-      <ul class="navigation">
-        <li class="navigation__item"><a href="#" class="navigation__link navigation__link_active">home</a></li>
+      <ul class="navigation" id="header__menu">
+        <li class="navigation__item"><a href="#header__menu" class="navigation__link navigation__link_active">home</a></li>
         <li class="navigation__item navigation__item_dot">·</li>
-        <li class="navigation__item"><a href="#" class="navigation__link">services</a></li>
+        <li class="navigation__item"><a href="#services-block" class="navigation__link">services</a></li>
         <li class="navigation__item navigation__item_dot">·</li>
-        <li class="navigation__item"><a href="#" class="navigation__link">portfolio</a></li>
+        <li class="navigation__item"><a href="#portfolio-block" class="navigation__link">portfolio</a></li>
         <li class="navigation__item navigation__item_dot">·</li>
-        <li class="navigation__item"><a href="#" class="navigation__link">about</a></li>
+        <li class="navigation__item"><a href="#about-block" class="navigation__link">about</a></li>
         <li class="navigation__item navigation__item_dot">·</li>
-        <li class="navigation__item"><a href="#" class="navigation__link">contact</a></li>
+        <li class="navigation__item"><a href="#contact-block" class="navigation__link">contact</a></li>
       </ul>
     </nav>
   </header>
@@ -43,7 +43,7 @@
     <div class="slider__arrow slider__arrow_right"></div>
   </div>
   <div class="slider-bottom"></div>
-  <div class="services">
+  <div class="services" id="services-block">
     <div class="services__title">
       <h2>Our Services</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -118,18 +118,18 @@
     </div>
   </div>
   <div class="services-bottom"></div>
-  <div class="portfolio">
+  <div class="portfolio" id="portfolio-block">
     <div class="portfolio__title">
       <h2>Portfolio</h2>
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
     </div>
-    <ul class="portfolio__tags">
-      <li class="active">All</li>
-      <li>Web Design</li>
-      <li>Graphic Design</li>
-      <li>Artwork</li>
+    <ul class="portfolio__tags" id="portfolio-tag-list">
+      <li class="active" img-offset="0">All</li>
+      <li img-offset="1">Web Design</li>
+      <li img-offset="2">Graphic Design</li>
+      <li img-offset="3">Artwork</li>
     </ul>
-    <div class="portfolio__examples">
+    <div class="portfolio__examples" id="portfolio-images">
       <div class="example__img example-1"></div>
       <div class="example__img example-2"></div> 
       <div class="example__img example-3"></div> 
@@ -145,7 +145,7 @@
     </div>        
   </div>
   <div class="portfolio-bottom"></div>
-  <div class="about-us">
+  <div class="about-us" id="about-block">
     <div class="about-us__title">
       <h2>About Us</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -196,7 +196,7 @@
     </div>
   </div>
   <div class="about-us-bottom"></div>
-  <div class="quote">
+  <div class="quote" id="contact-block">
     <div class="quote__title">
       <h2>Get a Quote</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -234,5 +234,6 @@
       </ul>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
