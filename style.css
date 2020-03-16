@@ -377,6 +377,17 @@ body p {
 .example__img {
   background-size: cover;
   background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;  
+}
+
+.example__img-border {
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border: 5px solid #F06C64;  
 }
 
 .example-1 {

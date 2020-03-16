@@ -1,6 +1,9 @@
 const HEADER_MENU = document.getElementById('header__menu');
 const PORTFOLIO_TAGS = document.getElementById('portfolio-tag-list');
+const PORTFOLIO_IMAGES_BORDER = document.createElement('div');
 let PORTFOLIO_IMAGES = document.getElementById('portfolio-images');
+
+PORTFOLIO_IMAGES_BORDER.classList.add('example__img-border');
 
 HEADER_MENU.addEventListener('click', (event) => {
   if(event.target.tagName === 'A') {
@@ -27,4 +30,13 @@ PORTFOLIO_TAGS.addEventListener('click', (event) => {
       }     
     }    
   }  
+});
+
+PORTFOLIO_IMAGES.addEventListener('click', (event) => {
+  if(event.target.tagName === 'DIV' && event.target.classList.contains('example__img')) {
+    PORTFOLIO_IMAGES.querySelectorAll('.example__img').forEach(el => el.hasChildNodes() ? el.removeChild(el.firstChild) : el);
+    event.target.appendChild(PORTFOLIO_IMAGES_BORDER);        
+  } else if(event.target.classList.contains('example__img-border')) {
+    event.target.parentNode.removeChild(event.target);
+  }
 });
