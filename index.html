@@ -205,7 +205,7 @@
       </div>
       <div class="quote-content">
         <div class="form-block">
-          <form action="POST">
+          <form method="POST" action="#">
             <input id="name" name="name" type="text" placeholder="Name (Required)" required>
             <input id="email" name="email" type="email" placeholder="Email (Required)" required>
             <input id="subject" name="subject" type="text" placeholder="Subject">
@@ -221,6 +221,14 @@
             <li><span class="icon"><img src="./assets/images/form-phone.png" alt="location"></span><a href="tel:035283318635">03528 331 86 35</a></li>
             <li><span class="icon"><img src="./assets/images/form-mail.png" alt="location"></span><a href="mailto:info@singolo.com">info@singolo.com</a></li>
           </ul>
+        </div>
+        <div class="message-area message-area_hidden">
+          <div class="message">
+            <h2>The letter was sent</h2>
+            <p id="message-subject"></p>
+            <p id="message-text"></p>
+            <button class="message-btn">OK</button>
+          </div>
         </div>
       </div>               
     </div>    

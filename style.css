@@ -674,11 +674,11 @@ input, textarea {
   cursor: pointer;
 }
 
-.form-block button:hover {
+button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-block button:active {
+button:active {
   box-shadow: none;
   transform: translateY(3px);
 }
@@ -727,4 +727,51 @@ input, textarea {
   font-size: 12px;
   color: #666d89;
   font-weight: 300;
+}
+
+.message-area {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #0008;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.message-area_hidden {
+  display: none;
+}
+
+.message {  
+  width: 40%;
+  height: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+.message h2 {
+  text-align: center;
+  font-weight: 700;
+}
+
+.message button {
+  width: 150px;
+  height: 30px;
+  background: #00A86B;  
+  border-radius: 5px;
+  color: #fff;  
+  text-align: center;
+  display: block;   
+  margin: 0 auto;
+  margin-top: 30px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }

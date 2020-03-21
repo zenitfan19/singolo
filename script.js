@@ -6,6 +6,9 @@ const SLIDER = document. getElementById('slider-block');
 const SLIDER_ARROW_LEFT = SLIDER.querySelector('.slider__arrow_left');
 const SLIDER_ARROW_RIGHT = SLIDER.querySelector('.slider__arrow_right');
 const SLIDES = SLIDER.querySelectorAll('.slider-wrapper > div');
+const FORM = document.querySelector('.form-block form');
+const FORM_POPUP = document.querySelector('.message-area');
+const FORM_POPUP_BTN = document.querySelector('.message-area button');
 let CURRENT_SLIDE_NUM = 0;
 let SLIDER_BLOCKED = false;
 let PORTFOLIO_IMAGES = document.getElementById('portfolio-images');
@@ -120,4 +123,18 @@ function moveSlideToRight() {
 SLIDER.querySelector('.slider-wrapper').addEventListener('transitionend', function () {
     setSlidesOrder();
     SLIDER_BLOCKED = false;
+});
+
+FORM.addEventListener('submit', (event => {
+  let subject = document.getElementById('subject').value;
+  let text = document.getElementById('project-details').value;  
+  event.preventDefault();
+  document.getElementById('message-subject').innerHTML = (subject) ? '<b>Subject:</b> ' + ( ( subject.length > 100 ) ? subject.value.substring(0, 100) + '...' : subject ) : 'No subject';
+  document.getElementById('message-text').innerHTML = (text) ? '<b>Description:</b> ' + ( ( text.length > 300 ) ? text.substring(0, 300) + '...' : text ) : 'No description';
+  FORM_POPUP.classList.toggle('message-area_hidden');
+  FORM.reset();    
+}));
+
+FORM_POPUP_BTN.addEventListener('click', () => {
+  FORM_POPUP.classList.toggle('message-area_hidden');  
 });
