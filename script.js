@@ -62,14 +62,14 @@ PORTFOLIO_IMAGES.addEventListener('click', (event) => {
   }
 });
 
-IPHONES.forEach(el => el.addEventListener('click', (event) => {
+SLIDER.querySelector('.slider-wrapper').addEventListener('click', (event) => {
   if(event.target.classList.contains('iphone__model')) {    
     let screen = event.target.nextElementSibling.classList.contains('iphone__screen') ? event.target.nextElementSibling : null;
     if(screen) {
       screen.classList.toggle('switched-off');    
     }
   }
-}));
+});
 
 SLIDER_ARROW_LEFT.addEventListener('click', () => {
   moveSlideToRight();
