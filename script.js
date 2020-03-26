@@ -9,6 +9,10 @@ const SLIDES = SLIDER.querySelectorAll('.slider-wrapper > div');
 const FORM = document.querySelector('.form-block form');
 const FORM_POPUP = document.querySelector('.message-area');
 const FORM_POPUP_BTN = document.querySelector('.message-area button');
+const MOBILE_MENU_BTN = document.querySelector('.mobile-menu-btn');
+const MOBILE_MENU = document.querySelector('.mobile-menu');
+const MOBILE_NAV = document.querySelector('.mobile-nav');
+const LOGO = document.querySelector('.logo');
 let CURRENT_SLIDE_NUM = 0;
 let SLIDER_BLOCKED = false;
 let PORTFOLIO_IMAGES = document.getElementById('portfolio-images');
@@ -22,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('scroll', (event) => {
   const currentPosition = window.scrollY + 95;
   const sections = document.querySelectorAll('main > div');
-  const menuItems = HEADER_MENU.querySelectorAll('a');  
+  const menuItems = document.documentElement.clientWidth >= 768 ? HEADER_MENU.querySelectorAll('a'): MOBILE_NAV.querySelectorAll('a');
 
   sections.forEach((el) => {
     if(el.offsetTop <= currentPosition && (el.offsetTop + el.offsetHeight) > currentPosition) {      
@@ -137,4 +141,11 @@ FORM.addEventListener('submit', (event => {
 
 FORM_POPUP_BTN.addEventListener('click', () => {
   FORM_POPUP.classList.toggle('message-area_hidden');  
+});
+
+MOBILE_MENU_BTN.addEventListener('click', () => {
+  MOBILE_MENU_BTN.classList.toggle('opened');
+  MOBILE_MENU.classList.toggle('opened');
+  LOGO.classList.toggle('transitioned');
+  MOBILE_NAV.classList.toggle('opened');
 });
